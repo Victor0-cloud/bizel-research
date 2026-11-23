@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07080b">
+  <title>Bizel Research — a read-only Reddit research prototype</title>
+  <meta name="description" content="Bizel Research is a one-person, read-only research prototype studying how genuinely useful contributions earn organic engagement on Reddit. Created by Victor.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="site-nav">
+    <div class="nav-inner">
+      <a class="wordmark" href="#top" aria-label="Bizel Research, back to top">
+        <span class="mark" aria-hidden="true">B</span>
+        <span class="wordmark-text">Bizel Research</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" id="menu-toggle">
+        <span class="menu-toggle-lines" aria-hidden="true"></span>
+        <span class="menu-toggle-label">Menu</span>
+      </button>
+      <nav class="menu" id="site-menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#safety">Safety</a>
+        <a href="#source">Source</a>
+        <a class="menu-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Read-only · Case study</p>
+        <h1>Bizel <em>Research</em></h1>
+        <p class="lede">A read-only research prototype studying how genuinely useful contributions earn organic engagement on Reddit.</p>
+        <p class="byline">A one-person research case study by Victor</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#features">Explore features</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-layout">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>01</span> About</p>
+          <h2>A one-person, <span class="nowrap">read-only</span> research prototype.</h2>
+        </header>
+        <div class="prose" data-reveal>
+          <p>Bizel Research observes public Reddit discussions, assesses their relevance, and prepares draft replies for human review. The researcher reviews and edits every draft, and manually posts any contribution from their own Reddit account.</p>
+          <p>The study measures genuine organic engagement over time, using publicly visible scores and comment activity. The application itself never posts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>02</span> Features</p>
+          <h2>Built to observe, score, and draft—<span class="nowrap">never to post.</span></h2>
+        </header>
+        <ul class="feature-grid">
+          <li class="feature-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="6.25"/>
+                <path d="M20 20l-3.8-3.8"/>
+                <path d="M8 11h6M11 8v6"/>
+              </svg>
+            </div>
+            <h3>Public Reddit reader</h3>
+            <p>Searches Reddit’s public JSON endpoints for relevant discussions. Requests are paced at about one per second, with backoff when rate limits appear.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5.4 16.2a7.4 7.4 0 1 1 13.2 0"/>
+                <path d="M12 14.25V9.8"/>
+                <path d="M12 14.25l3.15-1.35"/>
+                <circle cx="12" cy="14.25" r="1.05" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <h3>Predicted opportunity scoring</h3>
+            <p>Each discussion receives a 0–100 score, clearly labeled as a prediction. It reflects keyword relevance and basic intent signals, not a guaranteed outcome.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 4.75h7.2L19.25 10v9.25H7A1.25 1.25 0 0 1 5.75 18V6A1.25 1.25 0 0 1 7 4.75z"/>
+                <path d="M14.2 4.9V9.5h4.6"/>
+                <path d="M9 13.25h6M9 16.25h4"/>
+              </svg>
+            </div>
+            <h3>Grok reply drafts</h3>
+            <p>Prepares draft replies for human review and editing. If a draft model is unavailable, a simple template is used instead. A person decides whether anything is posted.</p>
+          </li>
+          <li class="feature-card" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 8.5V7.2A1.7 1.7 0 0 1 6.7 5.5h3.1L11.5 7.2H17.3A1.7 1.7 0 0 1 19 8.9v8.4A1.7 1.7 0 0 1 17.3 19H6.7A1.7 1.7 0 0 1 5 17.3V8.5z"/>
+                <path d="M9 13.25h6"/>
+              </svg>
+            </div>
+            <h3>Local draft saving</h3>
+            <p>Drafts and score history are stored locally on the researcher’s computer, not on a remote server.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="safety">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>03</span> Safety &amp; ethics</p>
+          <h2>Designed around restraint.</h2>
+        </header>
+        <div class="safety-layout">
+          <ul class="principle-list" data-reveal>
+            <li>Never posts, comments, votes, or sends messages automatically.</li>
+            <li>Never buys, coordinates, or manipulates votes.</li>
+            <li>Does not use multiple accounts.</li>
+            <li>Read-only and low volume, with paced public requests.</li>
+            <li>Keeps only minimal data, which is deleted after the study.</li>
+          </ul>
+          <aside class="communities" data-reveal>
+            <h3>Observation communities</h3>
+            <p>Initial observation focuses on these communities. Discussions are observed first, and each community’s rules are followed.</p>
+            <ul class="pills">
+              <li>r/SaaS</li>
+              <li>r/smallbusiness</li>
+              <li>r/Entrepreneur</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-source" id="source">
+      <div class="container narrow" data-reveal>
+        <p class="kicker"><span>04</span> Source code</p>
+        <blockquote class="source-quote">
+          <p>The full project source is available <span class="nowrap">on request.</span></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-layout">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>05</span> Contact</p>
+          <h2>Get in touch.</h2>
+        </header>
+        <ul class="contact-list" data-reveal>
+          <li>
+            <a href="mailto:mochiai45@gmail.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">mochiai45@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.reddit.com/user/BizelResearch" rel="noopener noreferrer">
+              <span class="contact-label">Reddit</span>
+              <span class="contact-value">u/BizelResearch</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Bizel Research · Victor</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
